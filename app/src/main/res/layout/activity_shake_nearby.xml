@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.qcwl.debo.ui.found.chat.ShakeNearbyActivity">
+
+    <include layout="@layout/title_bar" />
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/map_near"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp">
+
+    </com.baidu.mapapi.map.MapView>
+
+    <LinearLayout
+        android:id="@+id/linear_nobody"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#a6ffffff"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="70dp">
+
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="50dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/btn_fj"/>
+
+            <com.hyphenate.easeui.view.RoundedImageView
+                android:id="@+id/img_head_portrait"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                app:mutate_background="false"
+                app:oval="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/nobody"
+            android:textSize="15sp"
+            android:textColor="@color/font_normal"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_lot_person"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#a6ffffff"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:layout_marginTop="70dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="100dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/img_man"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:button="@drawable/man"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="男"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/img_woman"
+                    android:layout_width="145dp"
+                    android:layout_height="140dp"
+                    android:button="@drawable/woman"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="女"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/text_chat"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/send_message"
+            android:drawablePadding="-120dp"
+            android:drawableStart="@drawable/send_message_text"
+            android:paddingLeft="110dp"
+            android:text="@string/text_chat"
+            android:textColor="@color/send_color"
+            android:textSize="15sp"
+            />
+
+        <Button
+            android:id="@+id/video_chat"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/send_message"
+            android:drawablePadding="-120dp"
+            android:drawableStart="@drawable/send_message_video"
+            android:paddingLeft="110dp"
+            android:text="@string/video_chat"
+            android:textColor="@color/send_color"
+            android:textSize="15sp"
+            />
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

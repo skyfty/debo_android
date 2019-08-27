@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray4"
+    android:orientation="vertical"
+    tools:context="com.qcwl.debo.ui.my.partner.CertificationActivity">
+
+    <include layout="@layout/title_bar_white_no_status_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:gravity="center"
+        android:background="@color/color_gray7"
+        android:orientation="vertical">
+        <TextView
+            android:textSize="14sp"
+            android:drawableTop="@mipmap/ic_certification_not_pass"
+            android:text="还未完成实名认证"
+            android:drawablePadding="12dp"
+            android:textColor="@color/circle_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:text="真实姓名"
+            android:textSize="16sp"
+            android:paddingLeft="15dp"
+            android:textColor="@color/circle_name"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:layout_width="0dp"
+            android:hint="请输入您的真实姓名"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:paddingRight="15dp"
+            android:maxLines="1"
+            android:background="@null"
+            android:textColorHint="@color/circle_time"
+            android:textColor="@color/circle_time"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/edit_name"
+            android:layout_width="100dp"
+            android:text="身份证"
+            android:maxLines="1"
+            android:textSize="16sp"
+            android:paddingLeft="15dp"
+            android:textColor="@color/circle_name"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/edit_number"
+            android:layout_width="0dp"
+            android:hint="请输入您的身份证号"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:paddingRight="15dp"
+            android:maxLines="1"
+            android:digits="0123456789xX"
+            android:background="@null"
+            android:textColorHint="@color/circle_time"
+            android:textColor="@color/circle_time"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="提交"
+        android:textSize="18sp"
+        android:textColor="@color/color_red2"
+        android:background="@drawable/certification_btn_bg"/>
+
+
+</LinearLayout>

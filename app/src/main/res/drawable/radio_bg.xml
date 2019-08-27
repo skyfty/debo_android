@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/white" android:state_checked="false"/>
+    <item android:state_checked="true">
+        <layer-list>
+            <item android:drawable="@color/color_green2"/>
+            <item android:drawable="@color/white" android:bottom="2dp"/>
+        </layer-list>
+    </item>
+</selector>

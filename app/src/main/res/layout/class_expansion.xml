@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@+id/class_expansion"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="3dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分类"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/schedule"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/classify_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:text="工作"
+            android:gravity="center"
+            android:textColor="@color/schedule"/>
+
+        <ImageView
+            android:id="@+id/add_classify"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/addevent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:scaleType="fitXY"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+        <ListView
+            android:id="@+id/child_classify"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:scrollbars="none">
+
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

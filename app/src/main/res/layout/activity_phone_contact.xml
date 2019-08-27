@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/gradient_bg"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:id="@+id/left_layout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/left_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/left_image"
+                android:paddingBottom="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="centerInside" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="100dp"
+            android:clickable="true">
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/title"
+                android:indeterminate="false"
+                android:indeterminateDrawable="@drawable/progressbar"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/right_layout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/right_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/right_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="centerInside" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <include layout="@layout/center_search_bar" />
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative"
+        android:visibility="visible">
+
+        <com.qcwl.debo.view.AutoSwipRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:overScrollMode="never">
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:divider="@android:color/transparent"
+                android:overScrollMode="never"
+                android:paddingBottom="10dp" />
+
+        </com.qcwl.debo.view.AutoSwipRefreshLayout>
+
+        <TextView
+            android:id="@+id/dialog"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rect_gray2"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="30.0dip"
+            android:visibility="invisible" />
+
+        <com.qcwl.debo.widget.sortlistview.SideBar
+            android:id="@+id/sidrbar"
+            android:layout_width="26.0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center|bottom"
+            android:layout_marginTop="40dp" />
+
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFEEB2"
+                android:paddingRight="17dp"
+                android:drawableRight="@mipmap/delete"
+                android:paddingBottom="5dp"
+                android:paddingLeft="14dp"
+                android:paddingTop="9dp"
+                android:text="授权手机通讯录，找到更多朋友"
+                android:textColor="#FF6C00" />
+
+            <ImageView
+                android:id="@+id/iv_books"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="109dp"
+                android:src="@mipmap/address_books" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="171dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_books"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="33dp"
+                android:gravity="center"
+                android:text="允许嘚波访问手机通讯录帮你找到更多朋友"
+                android:textColor="#999999"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_setting"
+                android:layout_width="223dp"
+                android:layout_height="36dp"
+                android:layout_below="@+id/tv_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="23dp"
+                android:background="#71CC98"
+                android:gravity="center"
+                android:text="马上设置"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>

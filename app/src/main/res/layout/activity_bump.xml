@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                tools:context="com.qcwl.debo.ui.found.bump.BumpActivity">
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/relative_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="386dp"-->
+    <!--android:layout_marginTop="70dp">-->
+    <!--&lt;!&ndash;386dp为3倍的大小，不一定准确，具体以Activity中设置为主&ndash;&gt;-->
+    <!--<ImageView-->
+    <!--android:id="@+id/image_gif"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:scaleType="fitXY"-->
+    <!--android:visibility="gone" />-->
+
+    <!--<com.airbnb.lottie.LottieAnimationView-->
+    <!--android:id="@+id/animation_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:visibility="visible"-->
+    <!--app:lottie_autoPlay="false"-->
+    <!--app:lottie_loop="false" />-->
+
+
+    <!--<View-->
+    <!--android:id="@+id/view_start"-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_centerHorizontal="true" />-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="看看你的保龄球会撞出什么呢？"-->
+    <!--android:textColor="@color/fans_gray"-->
+    <!--android:textSize="14sp" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:text="试一试手气吧~"-->
+    <!--android:textColor="@color/fans_gray"-->
+    <!--android:textSize="14sp" />-->
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+    <!--<com.airbnb.lottie.LottieAnimationView-->
+    <!--android:id="@+id/animation_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--app:lottie_autoPlay="true"-->
+    <!--app:lottie_fileName="favourite_app_icon.json"-->
+    <!--app:lottie_loop="false" />-->
+
+    <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/singleperson"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_single"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:background="@null"
+                android:drawableLeft="@drawable/checkbox_selector2"
+                android:drawablePadding="5dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="单人撞"
+                android:gravity=""
+                android:textColor="@color/circle_name"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/doubleperson"
+                android:layout_marginTop="30dp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_double"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:background="@null"
+                android:drawableLeft="@drawable/checkbox_selector2"
+                android:drawablePadding="5dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="双人撞"
+                android:textColor="@color/circle_name"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

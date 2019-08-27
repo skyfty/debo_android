@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@+id/text_expansion"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="3dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:text="字体"
+            android:gravity="center"
+            android:textSize="13sp"
+            />
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="25dp"
+            android:text="系统字体"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:textColor="#e97070"
+            android:background="@drawable/red_bg"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:text="大小"
+                android:gravity="center"
+                android:textSize="13sp"
+                />
+            <TextView
+                android:id="@+id/text_size"
+                android:layout_width="75dp"
+                android:layout_height="25dp"
+                android:text="10"
+                android:gravity="center_vertical"
+                android:textSize="13sp"
+                android:paddingLeft="5dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/text_min"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="10"
+                android:textSize="12dp"/>
+            <SeekBar
+                android:id="@+id/text_size_seekbar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:max="30"
+                android:progressDrawable="@drawable/seekbar_textsize"
+                android:thumb="@drawable/add_icon_size"
+                />
+            <TextView
+                android:id="@+id/text_max"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="40"
+                android:textSize="12dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:text="颜色"
+                android:gravity="center"
+                android:textSize="13sp"
+                />
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:gravity="center_vertical"
+                android:textSize="13sp"
+                android:paddingLeft="5dp"
+                />
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/color_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+</LinearLayout>

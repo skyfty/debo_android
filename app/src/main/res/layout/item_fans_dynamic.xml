@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_view"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp">
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/circle_name"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/circle_time"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/text_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/text_time"
+                android:maxLines="1"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="删除"
+                android:textColor="@color/circle_reply"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:layout_marginLeft="50dp"
+        android:textColor="@color/circle_name"
+        android:textSize="14sp" />
+
+    <com.qcwl.debo.ui.circle.MyGridView
+        android:id="@+id/grid_view"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:horizontalSpacing="5dp"
+        android:layout_marginLeft="50dp"
+        android:scrollbars="none"
+        android:verticalSpacing="5dp" />
+
+    <!--<fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard-->
+    <!--android:id="@+id/video_player"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp" />-->
+
+    <RelativeLayout
+        android:id="@+id/layout_play_video"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="50dp"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/image_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/play_button" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/color_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/text_share"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@mipmap/ic_circle_share"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:paddingBottom="6dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="6dp"
+            android:text="0"
+            android:visibility="gone"
+            android:textColor="@color/fans_gray"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/img_share"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp"
+            android:src="@mipmap/ic_circle_share"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+
+        <TextView
+            android:id="@+id/text_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@mipmap/ic_circle_comment_normal"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:paddingBottom="6dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="6dp"
+            android:text="0"
+            android:textColor="@color/fans_gray"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/img_comment"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp"
+            android:src="@mipmap/ic_circle_comment_normal"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/text_praise"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@mipmap/ic_circle_praise_normal"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:paddingBottom="6dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="6dp"
+            android:text="0"
+            android:textColor="@color/fans_gray"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/img_praise"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp"
+            android:src="@mipmap/ic_circle_praise_normal"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

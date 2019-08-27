@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@mipmap/ck_select_red" android:state_checked="true"/>
+    <item android:drawable="@mipmap/ck_normal_red"/>
+
+</selector>	

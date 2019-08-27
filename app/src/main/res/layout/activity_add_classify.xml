@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.qcwl.debo.ui.found.memorandum.activity.AddClassifyActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/font_normal"
+        android:orientation="vertical">
+        <include layout="@layout/title_bar" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/classify_edit"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:hint="@string/new_classify"
+        android:gravity="center"
+        android:inputType="textMultiLine"
+        android:textSize="18sp"
+        android:textCursorDrawable="@color/color_green"
+        />
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_test"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:paddingLeft="16dp"
+            android:text="选择颜色"
+            android:gravity="center_vertical"
+            android:textColor="@color/schedule"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="@color/classify_line"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/color_classify"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"></android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+</LinearLayout>

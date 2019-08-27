@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.qcwl.debo.ui.found.fans.FansListActivity">
+
+    <include layout="@layout/title_bar" />
+
+    <TextView
+        android:id="@+id/text_fans_num"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text=""
+        android:textColor="@color/fans_gray"
+        android:textSize="16sp" />
+
+    <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+        android:id="@+id/swipeToLoadLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<include-->
+        <!--android:id="@id/swipe_refresh_header"-->
+        <!--layout="@layout/layout_jd_header" />-->
+
+        <ListView
+            android:id="@+id/swipe_target"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/color_divider"
+            android:dividerHeight="1px"
+            android:headerDividersEnabled="false"
+            android:scrollbars="none" />
+
+        <include
+            android:id="@id/swipe_load_more_footer"
+            layout="@layout/layout_load_more_progress" />
+    </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+
+</LinearLayout>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="20dp">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/ic_partner_coin_orange" />
+
+        <TextView
+            android:id="@+id/text_current_num"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/image_view"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingTop="10dp"
+            android:text="现有0个嘚啵币"
+            android:textColor="@color/circle_name"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/text_max_num"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/text_current_num"
+            android:layout_toRightOf="@+id/image_view"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingBottom="10dp"
+            android:text="最高可购买0个嘚啵币"
+            android:textColor="@color/circle_name"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/color_gray4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:text="购买数量"
+            android:textColor="@color/circle_name"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="13dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_partner_delete" />
+
+        <EditText
+            android:id="@+id/edit_num"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@drawable/partner_edit_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="100"
+            android:textColor="@color/circle_name"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="13dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_partner_add" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="24dp"
+        android:text="购买时间"
+        android:textColor="#333333"
+        android:textSize="15sp" />
+
+    <com.qcwl.debo.widget.FlowLayout
+        android:layout_marginTop="15dp"
+        android:id="@+id/flowLayoutSingleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" />
+    <!--<RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/partner_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="3个月｜收益10%"
+            android:textColor="#333333"
+            android:textSize="9sp" />
+
+        <RadioButton
+            android:id="@+id/radio_btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/partner_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="3个月｜收益20%"
+            android:textColor="@drawable/partner_text_select"
+            android:textSize="9sp" />
+
+        <RadioButton
+            android:id="@+id/radio_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/partner_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="9个月｜收益30%"
+            android:textColor="@drawable/partner_text_select"
+            android:textSize="9sp" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radio_group2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp">
+
+        <RadioButton
+            android:id="@+id/radio_btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/partner_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="12个月｜收益40%"
+            android:textColor="@drawable/partner_text_select"
+            android:textSize="9sp" />
+
+        <RadioButton
+            android:id="@+id/radio_btn4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/partner_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="自由购买"
+            android:textColor="@drawable/partner_text_select"
+            android:textSize="9sp" />
+
+       &lt;!&ndash; <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white" />&ndash;&gt;
+    </RadioGroup>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/color_red2"
+            android:text="购买"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.qcwl.debo.ui.found.SelectActivity">
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.qcwl.debo.fragment.ContactFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<android.support.design.widget.TabLayout-->
+    <!--android:id="@+id/tabLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="50dp"-->
+    <!--app:tabIndicatorColor="@color/color_green"-->
+    <!--app:tabIndicatorHeight="2dp"-->
+    <!--app:tabSelectedTextColor="@color/color_green"-->
+    <!--app:tabTextAppearance="@style/tabLayoutStyle"-->
+    <!--app:tabTextColor="@color/circle_name" />-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="#ededed"-->
+    <!--android:paddingBottom="12dp"-->
+    <!--android:paddingLeft="12dp"-->
+    <!--android:paddingRight="12dp"-->
+    <!--android:paddingTop="12dp">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/ease_seabar_input"-->
+    <!--android:gravity="center">-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/query"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginRight="4dp"-->
+    <!--android:background="@null"-->
+    <!--android:drawableLeft="@drawable/icon_search"-->
+    <!--android:drawablePadding="5dp"-->
+    <!--android:focusable="true"-->
+    <!--android:focusableInTouchMode="true"-->
+    <!--android:gravity="left"-->
+    <!--android:hint="姓名/帐号搜索"-->
+    <!--android:imeOptions="actionSearch"-->
+    <!--android:maxLines="1"-->
+    <!--android:paddingBottom="5dp"-->
+    <!--android:paddingTop="5dp"-->
+    <!--android:textColor="@color/circle_name"-->
+    <!--android:textColorHint="#9f9fa0"-->
+    <!--android:textSize="16sp" />-->
+
+    <!--</LinearLayout>-->
+
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/search_clear"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginRight="3dp"-->
+    <!--android:background="@android:color/transparent"-->
+    <!--android:padding="6dp"-->
+    <!--android:src="@drawable/icon_del"-->
+    <!--android:visibility="invisible" />-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<FrameLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1">-->
+
+    <!--<ListView-->
+    <!--android:id="@+id/listView"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:clipToPadding="false"-->
+    <!--android:divider="@color/color_divider"-->
+    <!--android:overScrollMode="never"-->
+    <!--android:paddingBottom="10dp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/dialog"-->
+    <!--android:layout_width="80dp"-->
+    <!--android:layout_height="80dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:background="@drawable/rect_gray"-->
+    <!--android:gravity="center"-->
+    <!--android:textColor="#ffffffff"-->
+    <!--android:textSize="30dp"-->
+    <!--android:visibility="invisible" />-->
+
+    <!--<com.qcwl.debo.widget.sortlistview.SideBar-->
+    <!--android:id="@+id/sidrbar"-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="right|center"-->
+    <!--android:layout_marginBottom="40dp"-->
+    <!--android:layout_marginTop="40dp" />-->
+    <!--</FrameLayout>-->
+</LinearLayout>

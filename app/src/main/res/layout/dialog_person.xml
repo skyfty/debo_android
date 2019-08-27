@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="277dp"
+    android:gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rect_white2"
+    android:layout_height="320dp"
+    android:theme="@style/red_packet_dialog">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/img_dismiss"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@mipmap/btn_close2"
+        android:layout_margin="10dp"
+        android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/headportrait">
+
+
+        <com.hyphenate.easeui.view.RoundedImageView
+            android:id="@+id/img_head"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            app:mutate_background="false"
+            android:layout_centerInParent="true"
+            app:oval="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="姓名，年龄"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:textColor="@color/card_name"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="30dp"
+        android:text="加好友"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:background="@drawable/pink_red_bg"/>
+
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@mipmap/upgrade_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingTop="160dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="一键安装新版本"
+                android:textColor="@color/color_555555"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:text="这里填写推荐更新的标题或者项目的标题"
+                android:textColor="@color/color_555555"
+                android:textSize="16sp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:overScrollMode="never"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="left"
+                        android:lineSpacingExtra="3dp"
+                        android:lineSpacingMultiplier="1.3"
+                        android:paddingTop="5dp"
+                        android:text="这里填写更新的内容"
+                        android:textColor="@color/color_555555"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/confirm"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:visibility="gone"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rect_light_green"
+            android:gravity="center"
+            android:tag="beta_confirm_button"
+            android:text="马上更新"
+            android:textColor="@color/color_555555" />
+        <com.qcwl.debo.view.ProgressButton
+            android:id="@+id/progress_button"
+            app:progressColor="@color/button_green_one1"
+            app:progressBgColor="@color/color_60D44F"
+            app:buttonNormalColor="@color/color_60D44F"
+            app:buttonPressedColor="@color/color_60D44F"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            app:buttonCornerRadius="5dp"
+            app:showProgressNum="true"
+            android:textColor="@color/color_555555"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="马上更新" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll"
+        android:layout_centerInParent="true"
+        android:alpha="0.3"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/btn_close"
+        android:tag="beta_cancel_button"
+        android:text="" />
+
+</RelativeLayout>

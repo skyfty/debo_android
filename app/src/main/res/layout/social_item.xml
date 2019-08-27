@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/catalog"
+        android:layout_width="fill_parent"
+        android:layout_height="22dp"
+        android:textSize="12sp"
+        android:background="#ededed"
+        android:clickable="false"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dip"
+        android:textColor="#454545" />
+
+    <LinearLayout
+        android:id="@+id/social_item_ll"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="@drawable/layout_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:button="@drawable/em_checkbox_bg_selector"
+            android:focusable="false"
+            android:visibility="gone" />
+
+        <com.hyphenate.easeui.view.RoundedImageView
+            android:id="@+id/touxiang"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:scaleType="centerCrop"
+            app:border_color="#ededed"
+            android:src="@mipmap/head"
+            app:border_width="0.5dp"
+            app:corner_radius="5dip"
+            app:mutate_background="false"
+            app:oval="true" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dip"
+                android:paddingTop="5dip"
+                android:text="Ameng"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="25dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/font_normal"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginLeft="68dp"
+        android:background="@color/divider"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/divider"
+        android:visibility="gone" />
+</LinearLayout>

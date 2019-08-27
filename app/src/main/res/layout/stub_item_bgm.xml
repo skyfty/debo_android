@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.8"
+    android:background="#07080B"
+    android:paddingRight="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/sound_effect_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#08080b"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/bgm_title_soundChange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="变声"
+                android:textColor="@drawable/record_title_text"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/bgm_title_soundChange_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/title_indicator_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/bgm_title_reverberation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="混响"
+                android:textColor="@drawable/record_title_text"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/bgm_title_reverberation_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/title_indicator_color" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/soundEffect_change"
+        layout="@layout/bgm_sound_change"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/sound_effect_title"
+        android:visibility="visible" />
+
+    <include
+        android:id="@+id/soundEffect_reverberation"
+        layout="@layout/bgm_reverberation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/sound_effect_title"
+        android:visibility="gone" />
+
+</RelativeLayout>

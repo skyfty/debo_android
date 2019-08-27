@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/all"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_margin="15dp"
+            android:button="@null"
+            android:background="@drawable/screen_pop"
+            android:text="全部"
+            android:gravity="center"
+            android:checked="true"
+            android:textColor="@color/pop_color"
+            android:textSize="16sp"/>
+
+        <CheckBox
+            android:id="@+id/completed"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="15dp"
+            android:button="@null"
+            android:background="@drawable/screen_pop"
+            android:text="已完成"
+            android:gravity="center"
+            android:textColor="@color/pop_color"
+            android:textSize="16sp"/>
+
+        <CheckBox
+            android:id="@+id/not_finished"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="15dp"
+            android:button="@null"
+            android:background="@drawable/screen_pop"
+            android:text="未完成"
+            android:gravity="center"
+            android:textColor="@color/pop_color"
+            android:textSize="16sp"/>
+
+</LinearLayout>

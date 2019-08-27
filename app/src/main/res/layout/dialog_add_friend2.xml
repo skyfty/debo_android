@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp"
+        android:paddingTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/bg_dialog_sign"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="40dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/head_bg"/>
+
+            <com.hyphenate.easeui.view.RoundedImageView
+                android:id="@+id/image_view"
+                android:layout_width="112dp"
+                android:layout_height="112dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                app:mutate_background="false"
+                app:oval="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text=""
+            android:textColor="#474747"
+            android:textSize="16dp" />
+
+
+        <Button
+            android:id="@+id/ben_addfriend"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="30dp"
+            android:text="加为好友"
+            android:textColor="@color/white"
+            android:background="@drawable/pink_red_bg"
+            android:textSize="16dp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_dismiss"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:padding="14dp"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/found_close" />
+</RelativeLayout>

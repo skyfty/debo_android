@@ -1,0 +1,42 @@
+<resources>
+    <dimen name="size_80">80dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="circle_head_name">20sp</dimen>//朋友圈头部name
+    <dimen name="circle_name">15sp</dimen>//朋友圈发布姓名
+    <dimen name="circle_content">18sp</dimen>//朋友圈发布内容
+    <dimen name="circle_data">14sp</dimen>//朋友圈评论字体大小
+    <dimen name="circle_head_bg">330dp</dimen>//朋友圈head头部背景图
+    <dimen name="circle_head_photo">100dp</dimen>//朋友圈head头部人头像
+    <dimen name="circle_image_head_marginTop">201dp</dimen>//朋友圈head头部头像距离顶部
+    <dimen name="circle_image_photo2">33dp</dimen>//朋友圈评论头像
+    <dimen name="circle_image_photo3">28dp</dimen>//朋友圈点赞头像
+    <dimen name="circle_message_image">43dp</dimen>//朋友圈发表图片高宽
+    <dimen name="circle_recycle_item_marginleft">16dp</dimen>//朋友圈列表距离左边距
+    <dimen name="circle_recycle_item_marginphoto">10dp</dimen>//朋友圈发布内容距离头像距离
+    <dimen name="circle_recycle_item_margintop">14dp</dimen>//朋友圈列表距离顶部
+    <dimen name="circle_recycle_item_marginbottom">14dp</dimen>//朋友圈列表距离底部
+
+    <dimen name="circle_popuwindow_width">200dp</dimen>//朋友圈顶部pupuwindow
+    <dimen name="circle_popuwindow_height">100dp</dimen>//朋友圈顶部pupuwindow
+    <dimen name="circle_popuwindow_text">14sp</dimen>//朋友圈popuwindow
+    <dimen name="circle_view_margin">13dp</dimen>//朋友圈popuwindow view margin
+    <!-- google -->
+    <dimen name="refresh_header_height_google">100dp</dimen>
+    <dimen name="refresh_trigger_offset_google">100dp</dimen>
+    <dimen name="refresh_final_offset_google">150dp</dimen>
+    <dimen name="refresh_drawable_size_google">40dp</dimen>
+
+    <dimen name="load_more_footer_height_google">72dp</dimen>
+    <dimen name="load_more_trigger_offset_google">88dp</dimen>
+    <dimen name="load_more_final_offset_google">120dp</dimen>
+    <dimen name="load_more_drawable_size_google">36dp</dimen>
+
+    <dimen name="corner_radius">8dp</dimen>
+
+    <dimen name="config_text_size">14sp</dimen>
+    <dimen name="config_text_padding">5dp</dimen>
+    <dimen name="config_text_type_width">80dp</dimen>
+    <dimen name="config_text_width">60dp</dimen>
+    <dimen name="rippleStrokeWidth">2dp</dimen>
+    <dimen name="rippleRadius">64dp</dimen>
+</resources>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="240dp"
+    android:layout_height="250dp"
+    android:background="@drawable/rect_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:text="请选择支付方式"
+        android:textColor="@color/circle_name"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_divider" />
+
+    <LinearLayout
+        android:id="@+id/layout_coin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_coin_pay"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/layout_bg"
+            android:drawableLeft="@mipmap/ic_coin"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="30dp"
+            android:text="零钱支付"
+            android:textColor="@color/circle_name"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_divider" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_wxpay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/layout_bg"
+        android:drawableLeft="@mipmap/ic_wxpay"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:text="微信支付"
+        android:textColor="@color/circle_name"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_divider" />
+
+    <TextView
+        android:id="@+id/text_alipay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/layout_bg"
+        android:drawableLeft="@mipmap/ic_alipay"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:text="支付宝支付"
+        android:textColor="@color/circle_name"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_divider" />
+</LinearLayout>

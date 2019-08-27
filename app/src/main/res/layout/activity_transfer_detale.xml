@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/title_bar" />
+
+    <ImageView
+        android:id="@+id/tv_transfer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/root"
+        android:layout_marginTop="50dp"
+        android:src="@mipmap/icon_transfer_ok" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_transfer"
+        android:layout_marginTop="20dp"
+        android:text="已收款" />
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginTop="20dp"
+        android:text="￥0.01"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/tv_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_money"
+        android:layout_marginTop="25dp"
+        android:text="查看零钱"
+        android:textColor="@color/actionsheet_blue" />
+
+
+    <TextView
+        android:id="@+id/tv_transfer_time"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_receipt_time"
+        android:layout_marginBottom="10dp"
+        android:text="转账时间:2018-10-23 10:24:19" />
+
+    <TextView
+        android:id="@+id/tv_receipt_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="15dp"
+        android:text="收钱时间:2018-10-24 10:24:19" />
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/radio"
+    android:padding="13dp"
+    android:layout_width="260dp"
+    android:layout_height="330dp">
+
+    <RelativeLayout
+        android:id="@+id/linear"
+        android:layout_width="245dp"
+        android:layout_height="315dp"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/icon_red_bg">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/btn_close_gray" />
+
+        <ImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/iv_close"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_photo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:text="name"
+            android:textColor="#ffe99e"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_content2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:text="给你发了一个红包"
+            android:textColor="#ffd339"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_content2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="恭喜发财，大吉大利"
+            android:textColor="#ffe99e"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_open"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/tv_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/icon_open_red_packet1" />
+
+    </RelativeLayout>
+</FrameLayout>

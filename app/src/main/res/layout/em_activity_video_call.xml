@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/layout_bg">
+
+    <RelativeLayout
+        android:id="@+id/layout_surface_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.hyphenate.media.EMCallSurfaceView
+            android:id="@+id/opposite_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_btns"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <LinearLayout
+            android:id="@+id/ll_top_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            android:padding="10dip">
+
+            <com.hyphenate.easeui.view.RoundedImageView
+                android:id="@+id/image_photo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/head"
+                android:visibility="visible"
+                app:corner_radius="5dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dip"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_nick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="xxx"
+                    android:textColor="@android:color/white"
+                    android:textSize="18dp"
+                    tools:ignore="HardcodedText" />
+
+
+                <TextView
+                    android:id="@+id/tv_call_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dip"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingRight="12dp"
+                    android:text="xxx"
+                    android:textColor="@color/voip_interface_text_color"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+            <com.qcwl.debo.widget.MyChronometer
+                android:id="@+id/chronometer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:text="Chronometer"
+                android:textColor="#fff"
+                android:visibility="gone"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_is_p2p"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="#fff"
+                android:textSize="18dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 演示视频录制功能 -->
+        <Button
+            android:id="@+id/btn_record_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_top_container"
+            android:text="@string/recording_video"
+            android:visibility="gone" />
+
+
+        <Button
+            android:id="@+id/btn_capture_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/capture_image"
+            android:visibility="gone" />
+
+        <SeekBar
+            android:id="@+id/seekbar_y_detal"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_capture_image"
+            android:max="200"
+            android:progress="100"
+            android:visibility="gone" />
+        <!--     <Button
+            android:layout_marginTop="3dp"
+            android:id="@+id/btn_toggle_video_stream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂停视频"
+            android:layout_below="@id/btn_record_video"
+            /> -->
+
+        <TextView
+            android:id="@+id/tv_call_monitor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="6dp"
+            android:textColor="#afff"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <com.hyphenate.media.EMCallSurfaceView
+            android:id="@+id/local_surface"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/ll_top_container" />
+
+        <LinearLayout
+            android:id="@+id/ll_surface_baseline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:paddingTop="8dp">
+
+
+            <LinearLayout
+                android:id="@+id/ll_bottom_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="12dip"
+                    android:paddingRight="12dip">
+
+                    <LinearLayout
+                        android:id="@+id/llCommunication"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:id="@+id/ll_voice_control"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:id="@+id/iv_mute"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dip"
+                                android:src="@mipmap/ic_qhyy" />
+
+                            <TextView
+                                android:id="@+id/tvIsStopvoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/trans_voice"
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="10dip"
+                            android:layout_height="0dip" />
+
+                        <Button
+                            android:id="@+id/btn_hangup_call"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:drawablePadding="2dip"
+                            android:drawableTop="@mipmap/ic_phone_stop"
+                            android:text="@string/hang_up"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"
+                            android:visibility="visible" />
+
+                        <View
+                            android:layout_width="10dip"
+                            android:layout_height="0dip" />
+
+                        <Button
+                            android:id="@+id/btn_switch_camera"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/btn_record_video"
+                            android:background="@null"
+                            android:drawablePadding="2dip"
+                            android:drawableTop="@mipmap/ic_qhxj"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="@string/zhsxt"
+                            android:textColor="@android:color/white" />
+
+
+                        <LinearLayout
+                            android:id="@+id/llMianTi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="4dip"
+                            android:paddingRight="4dip"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/iv_handsfree"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dip"
+                                android:src="@mipmap/ic_yywaifang" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Hands_free"
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_coming_call"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dip"
+                        android:paddingRight="20dp"
+                        android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/btn_refuse_call"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:drawablePadding="2dip"
+                            android:drawableTop="@mipmap/ic_phone_stop"
+                            android:text="@string/hang_up"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp" />
+
+
+                        <View
+                            android:layout_width="0dip"
+                            android:layout_height="0dip"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:id="@+id/btn_answer_call"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:drawablePadding="2dip"
+                            android:drawableTop="@mipmap/ic_phone_start"
+                            android:text="@string/answer"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_network_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+</RelativeLayout>

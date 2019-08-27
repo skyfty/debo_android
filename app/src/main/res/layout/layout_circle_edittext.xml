@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/color_divider"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_gravity="bottom"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp"
+    android:visibility="gone"
+    android:id="@+id/layout_comment">
+
+    <EditText
+        android:id="@+id/edit_content"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/rect_stroke_gray"
+        android:hint="请输入"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@color/fans_gray"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/text_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/rect_login"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:text="发送"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+</LinearLayout>

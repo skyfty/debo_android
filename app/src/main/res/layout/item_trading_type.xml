@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/radio_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/radio_green_bg"
+        android:button="@null"
+        android:gravity="center"
+        android:text=""
+        android:clickable="false"
+        android:textColor="@color/radio_color2" />
+</LinearLayout>

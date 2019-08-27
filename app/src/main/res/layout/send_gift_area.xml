@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="20dp">
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="专属礼物"
+            android:textColor="@color/light_green"/>
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="3dp"
+            android:background="@color/light_green"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <include layout="@layout/gift_details"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gray"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:id="@+id/balance_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/btn_5_gold"
+            android:drawablePadding="5dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="1111"
+            android:textColor="@color/schedule"/>
+
+        <Button
+            android:id="@+id/send_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/gift_green"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:text="立即赠送"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

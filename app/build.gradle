@@ -1,0 +1,295 @@
+apply plugin: 'com.android.application'
+apply from: 'tinker-support.gradle'
+apply plugin:'com.antfortune.freeline'
+android {
+    //Freeline配置
+    freeline {
+        hack true
+        autoDependency false
+        //productFlavor "normal"
+    }
+
+    signingConfigs {
+        config {
+            storeFile file('../app/src/main/keystore/debo.jks')
+            storePassword '926100'
+//            if(System.console() != null)
+//            storePassword System.console().readLine("\nKeyStore password:")
+            keyAlias 'qcwl'
+            keyPassword '926100'
+//            if(System.console() != null)
+//            keyPassword System.console.readLine("\nKey password:")
+        }
+    }
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    defaultConfig {
+        applicationId "com.qcwl.debo"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 29
+        versionName "1.6.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi-v7a'//, 'arm64-v8a'
+
+            //模拟器x86环境运行
+            //abiFilters 'x86'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+//        versionCode=200
+//        versionName=2.0
+            flavorDimensions "versionCode"
+//        jackOptions {//---
+//            // 打开jack编译器
+//            enabled true
+//        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            signingConfig signingConfigs.config
+        }
+        release {
+            /*shrinkResources true//删除项目中不会使用的资源
+            minifyEnabled true//删除所有未使用的方法和类*/
+            debuggable true
+            //minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+
+    productFlavors {
+        preassemble {
+            dimension "versionCode"
+        }
+        debophone {
+            dimension "versionCode"
+        }
+        tengxun {
+            dimension "versionCode"
+        }
+        s360{
+            dimension "versionCode"
+        }
+        wandoujia{
+            dimension "versionCode"
+        }
+        anzhi{
+            dimension "versionCode"
+        }
+        baidu{
+            dimension "versionCode"
+        }
+        huawei{
+            dimension "versionCode"
+        }
+        ali{
+            dimension "versionCode"
+        }
+    }
+    //批量处理
+    productFlavors.all {
+        flavor ->
+            flavor.manifestPlaceholders = [MTA_CHANNEL_VALUE: name]
+    }
+
+
+    dexOptions {//优化dex配置
+        /*dexInProcess true
+        preDexLibraries true
+        javaMaxHeapSize "2g"*/
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+android {
+    sourceSets.main {
+        jni.srcDirs = []
+        jniLibs.srcDir "libs"
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs' //就是你放aar的目录地址
+    }
+}
+
+
+configurations.all {
+    resolutionStrategy {
+        force 'com.android.support:appcompat-v7:27.1.1'
+        force 'com.android.support:design:27.1.1'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':easeui')
+    compile(name: 'multi-image-selector-release', ext: 'aar')
+    //腾讯bugly
+    compile(name: 'bugly_crashreport_upgrade-1.3.5', ext: 'aar')
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
+
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+    compile files('libs/alipaySdk-20170725.jar')
+
+    //    compile project(':video_sdk')
+
+    //友盟分享
+    compile files('libs/umeng-common-1.5.3.jar')
+    compile files('libs/umeng-share-core-6.9.3.jar')
+    compile files('libs/umeng-share-QQ-simplify-6.9.3.jar')
+    compile files('libs/umeng-share-wechat-simplify-6.9.3.jar')
+    compile files('libs/umeng-sharetool-6.9.3.jar')
+    compile 'com.zhy:mpermission-api:1.0.0'
+    compile 'com.squareup.picasso:picasso:2.4.0'
+    compile 'id.zelory:compressor:1.0.2'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+    //  compile 'com.android.support:design:25.3.1'
+
+
+    //compile 'com.tencent.bugly:crashreport_upgrade:latest.release'
+    //compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    compile 'com.contrarywind:Android-PickerView:3.2.5'
+
+    //   compile 'com.google.code.gson:gson:2.7'
+    compile 'com.baoyz.swipemenulistview:library:1.3.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.zhy:base-rvadapter:3.0.3'
+    compile 'com.zhy:base-adapter:3.0.3'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.github.Aspsine:SwipeToLoadLayout:1.0.4'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.jaeger.statusbarutil:library:1.4.0'
+    compile 'com.google.android:flexbox:0.3.0-alpha2'
+    compile 'com.airbnb.android:lottie:2.1.0'
+    compile 'cjt.library.wheel:camera:1.1.6'
+    compile 'fm.jiecao:jiecaovideoplayer:5.8.1'
+    compile 'cn.jzvd:jiaozivideoplayer:6.2.8'
+    compile 'com.github.frank-zhu:pullzoomview:1.0.0'
+    compile 'com.android.support:support-v4:27.1.1'
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile 'com.lsjwzh:materialloadingprogressbar:0.5.8-RELEASE'
+    compile 'com.jungly:gridPasswordView:0.3'
+    compile 'com.github.hackware1993:MagicIndicator:1.5.0'
+    compile 'com.android.volley:volley:1.0.0'
+    compile 'com.android.support:recyclerview-v7:27.1.1'
+    compile 'com.yqritc:recyclerview-flexibledivider:1.4.0'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.zhy:mpermission-compiler:1.0.0'
+
+    compile 'org.greenrobot:eventbus:3.1.1'
+    /*阿里云短视频相关*/
+    compile 'com.android.support:appcompat-v7:27.1.1'
+    compile 'com.android.support:design:27.1.1'
+    compile 'com.google.code.findbugs:jsr305:3.0.0'
+    compile 'pub.devrel:easypermissions:0.2.1'
+
+    //compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    compile 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
+
+    //compile 'com.squareup.okio:okio:1.12.0'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile(name: 'QuSdk-RC', ext: 'aar')
+    compile files('libs/aliyun-vod-croe-android-sdk-1.0.0.jar')
+    compile files('libs/aliyun-vod-upload-android-sdk-1.1.0.jar')
+
+    //播放相关
+    compile(name: 'AlivcPlayer', ext: 'aar')
+
+    //   compile(name: 'AlivcReporter', ext: 'aar')
+    compile(name: 'AliyunVodPlayer', ext: 'aar')
+    compile(name: 'AliyunVodPlayerView', ext: 'aar')
+    compile 'com.android.support:cardview-v7:27.1.1'
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar'
+
+    //金山云短视频相关
+    compile 'com.android.volley:volley:1.0.0'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
+
+    /*  compile 'com.ksyun.ks3:ks3androidsdk:1.4.1'*/
+    compile('com.ksyun.ks3:ks3androidsdk:1.4.1') { exclude module: 'com/android/internal' }
+
+    /*  compile 'com.tencent.bugly:crashreport:latest.release'*/
+
+    /* compile 'com.tencent.bugly:nativecrashreport:latest.release'*/
+
+    //录制魔方动态贴纸依赖库，若不使用，可以不依赖   org.apache.http.legacy.jar
+    compile 'com.ksyun.mc:libkmcfilter_sensetime:1.0.5'
+    compile 'com.ksyun.mc:SenseTimeAR:1.0.4'
+
+    //动态贴纸依赖库，若不使用，使用provided
+    compile 'com.facebook.fresco:fresco:1.4.0'
+    compile 'com.facebook.fresco:animated-gif:1.4.0'
+    compile 'com.facebook.fresco:animated-webp:1.4.0'
+    compile 'com.lht:paintview:1.17'
+    compile 'com.ksyun.media:libksysv-java:1.5.3'
+    compile 'com.ksyun.media:libksysv-arm64:1.5.3'
+    compile 'com.ksyun.media:libksysv-armv7a:1.5.3'
+    compile 'com.ksyun.media:libksysv-x86:1.5.3'
+
+    //锐动视频录制
+    compile 'com.rd:base:0.4.9'
+    compile 'com.rd:recorderbase:0.8.3'
+    //compile 'com.facebook.fresco:fresco:1.3.0'
+    compile 'com.facebook.fresco:webpsupport:1.3.0'
+    compile 'com.squareup.okio:okio:1.13.0'
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
+    compile 'com.alibaba:fastjson:1.2.9'
+
+    //    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    compile 'com.gyf.barlibrary:barlibrary:2.3.0'
+    compile files('libs/Baidu_Mtj_3.8.1.1.jar')
+    compile 'com.github.devlight.shadowlayout:library:1.0.2'
+    provided  'com.tencent.tinker:tinker-android-anno:1.7.7'
+    compile 'com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.1.4'
+    compile 'com.chw.android:widget:3.0.3'
+    compile 'com.lzy.widget:view-core:0.2.2'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    compile 'com.facebook.rebound:rebound:0.3.8'
+    /*compile 'jp.wasabeef:glide-transformations:2.0.1 '*/
+
+    //glide高斯模糊
+    compile project(':mylibrary')
+
+    //华为推送
+
+    //compile project(':hmspush')
+    implementation project(':rdVECore')
+    implementation project(':rdVEUISdk')
+
+
+    //Freeline配置
+    debugCompile 'com.antfortune.freeline:runtime:0.8.8'
+    releaseCompile 'com.antfortune.freeline:runtime-no-op:0.6.2'
+    testCompile 'com.antfortune.freeline:runtime-no-op:0.6.2'
+
+}

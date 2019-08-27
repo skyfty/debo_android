@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/trans"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/image_back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_pengliao_delete" />
+
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_nearby"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.qcwl.debo.view.RadarView
+        android:id="@+id/content"
+        android:layout_below="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:rb_color="#ffdab6ff"
+        app:rb_duration="3000"
+        app:rb_radius="50dp"
+        app:rb_rippleAmount="4"
+        app:rb_scale="6">
+
+        <!--<ImageView
+            android:id="@+id/image_left"
+            android:layout_width="78dp"
+            android:layout_height="32dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/feiji_left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/image_right"
+            android:layout_width="78dp"
+            android:layout_height="32dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/feiji_right2"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_mode1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="83dp"
+            android:text="匹配成功"
+            android:textSize="30sp"
+            android:visibility="gone" />-->
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="78dp"
+            android:layout_marginTop="30dp"
+            android:layout_height="32dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/feiji_left" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/centerImage"
+            android:layout_width="192dp"
+            android:layout_height="192dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/head" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/centerImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:text="艾薇儿"
+            android:textColor="@color/card_name"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_centerHorizontal="true"
+            android:text="女-白羊座"
+            android:textColor="@color/card_name"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/centerImage"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/tv_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="正在匹配"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_mode"
+                android:layout_centerHorizontal="true"
+                android:text="1s"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_time"
+                android:layout_centerHorizontal="true"
+                android:text="等待时间"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </com.qcwl.debo.view.RadarView>
+</RelativeLayout>

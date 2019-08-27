@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/line1"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/peronal_head_height"
+    android:orientation="vertical"
+    android:paddingLeft="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/peronal_head_margin_top">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/act_usericon"
+            android:layout_width="@dimen/peronal_head_photo"
+            android:layout_height="@dimen/peronal_head_photo"
+            android:src="@mipmap/debo_logo"
+            app:border_color="#ededed"
+            app:mutate_background="false" />
+
+        <TextView
+            android:id="@+id/bt_guanzhu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="46dp"
+            android:background="#ff71cc95"
+            android:paddingBottom="3dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:text="+ 关注"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/peronal_name_margintop"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="彤彤"
+            android:textColor="@color/white"
+            android:textSize="@dimen/peronal_name" />
+
+        <ImageView
+            android:id="@+id/iv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="2dp"
+            android:background="@drawable/address_shap"
+            android:scaleType="centerInside"
+            android:src="@mipmap/gender_women" />
+
+        <TextView
+            android:id="@+id/tv_addr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:gravity="center"
+            android:paddingBottom="1dp"
+            android:paddingTop="1dp"
+            android:background="@drawable/address_shap"
+            android:text="福建·福州"
+            android:textColor="#ffcecece"
+            android:textSize="@dimen/peronal_outher" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="6dp"
+        android:text="嘚波号：123456756"
+        android:textColor="@color/white"
+        android:textSize="@dimen/peronal_outher" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="@dimen/peronal_view_margintop"
+        android:background="#ffdcdcdc" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="说点什么......"
+        android:textColor="#ffcdcdcd"
+        android:textSize="@dimen/peronal_outher" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="@dimen/peronal_other_margintop"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_praise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="0获赞"
+            android:textColor="@color/white"
+            android:textSize="@dimen/peronal_dianzan" />
+
+        <TextView
+            android:id="@+id/tv_guanzhu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="25dp"
+            android:text="72关注"
+            android:textColor="@color/white"
+            android:textSize="@dimen/peronal_dianzan" />
+
+        <TextView
+            android:id="@+id/tv_fan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="25dp"
+            android:text="2粉丝"
+            android:textColor="@color/white"
+            android:textSize="@dimen/peronal_dianzan" />
+    </LinearLayout>
+</LinearLayout>

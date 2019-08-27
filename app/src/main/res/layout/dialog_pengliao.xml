@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/trans"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/image_back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside"
+                android:paddingBottom="14dp"
+                android:paddingTop="12dp"
+                android:src="@mipmap/icon_pengliao_delete" />
+
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_nearby"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/image_feiji_left"
+        android:layout_width="78dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="left"
+        android:scaleType="centerInside"
+        android:src="@mipmap/feiji_left" />
+
+    <ImageView
+        android:id="@+id/image_feiji_right"
+        android:layout_width="78dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="-25dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="13dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/feiji_right2" />
+
+    <TextView
+        android:id="@+id/tv_mode1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="匹配成功"
+        android:textSize="30sp" />
+
+    <FrameLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:paddingLeft="29dp"
+        android:paddingRight="29dp">
+
+
+        <LinearLayout
+            android:id="@+id/line_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="vertical">
+
+            <!--<com.example.xuhong.radarviewiphone_master.RoundedImageView
+                android:id="@+id/image_right"
+                android:layout_width="192dp"
+                android:layout_height="192dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/filter_nature"
+                app:border_color="@color/colorAccent"
+                app:border_width="3dp"
+                app:oval="true" />-->
+            <FrameLayout
+                android:id="@+id/frameLayout_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.qcwl.debo.view.RoundImageView
+                    android:id="@+id/image_right"
+                    android:layout_width="192dp"
+                    android:layout_height="192dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pl_tx_bj"
+                    app:border_width1="4dp"
+                    app:image_circle="true"
+                    app:image_radius="30dp"
+                    app:image_shadow="true"
+                    app:image_shadow_radius1="20dp" />
+
+                <com.hyphenate.easeui.view.RoundedImageView
+                    android:id="@+id/image_right1"
+                    android:layout_width="162dp"
+                    android:layout_height="162dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/head"
+                    app:border_color="@color/white"
+                    app:border_width="3dp"
+                    app:oval="true" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="扎克"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_gender1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="9dp"
+                android:text="男-天蝎座"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:orientation="vertical">
+
+            <!--<com.example.xuhong.radarviewiphone_master.RoundImageView
+                android:id="@+id/image_left"
+                android:layout_width="192dp"
+                android:layout_height="192dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/faded"
+                app:border_width1="4dp"
+                app:image_circle="true"
+                app:image_radius="30dp"
+                app:image_shadow="true"
+                app:image_shadow_radius1="20dp" />-->
+
+            <FrameLayout
+                android:id="@+id/frameLayout_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.qcwl.debo.view.RoundImageView
+                    android:id="@+id/image_left"
+                    android:layout_width="192dp"
+                    android:layout_height="192dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pl_tx_bj"
+                    app:border_width1="4dp"
+                    app:image_circle="true"
+                    app:image_radius="30dp"
+                    app:image_shadow="true"
+                    app:image_shadow_radius1="20dp" />
+
+                <com.hyphenate.easeui.view.RoundedImageView
+                    android:id="@+id/image_left1"
+                    android:layout_width="162dp"
+                    android:layout_height="162dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/head"
+                    app:border_color="@color/white"
+                    app:border_width="3dp"
+                    app:oval="true" />
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="艾薇儿"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="9dp"
+                android:text="女-白羊座"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_video"
+        android:layout_width="203dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rect_green3"
+        android:gravity="center"
+        android:text="视频聊天"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="203dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/touch_chat_bg"
+        android:gravity="center"
+        android:text="文字聊天"
+        android:textColor="@color/sign_green"
+        android:textSize="15sp" />
+</LinearLayout>

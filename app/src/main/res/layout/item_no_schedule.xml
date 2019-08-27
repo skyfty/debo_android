@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:gravity="center_horizontal">
+
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/black"/>
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/pink_red_bg"/>
+
+        <View
+            android:layout_width="0.1dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@color/black"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_time"
+        android:text="08:00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="@dimen/padding_10"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/alivc_rr_bg_white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="公司例会"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:textSize="16sp"
+            android:layout_weight="1"/>
+        
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingBottom="5dp"
+                android:layout_height="match_parent"
+                android:text="未分类"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="提醒时间：08:00"
+                android:gravity="right|center_vertical"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:textSize="14sp"
+                android:layout_height="match_parent"/>
+            
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

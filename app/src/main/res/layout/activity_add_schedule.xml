@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.qcwl.debo.ui.found.memorandum.activity.AddScheduleActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/font_normal"
+        android:orientation="vertical">
+        <include layout="@layout/title_bar" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edit_details"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:hint="@string/new_schedule"
+        android:gravity="top"
+        android:background="@null"
+        android:inputType="textMultiLine"
+        android:textSize="14sp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_green"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="35dp">
+
+        <RelativeLayout
+            android:id="@+id/img_select"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="12dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/img_yorn"/>
+            <TextView
+                android:id="@+id/img_size"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@drawable/add_icon_5"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:maxLength="1"
+                android:text="99"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:layout_margin="5dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/text_select"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/text_yorn"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/time_select"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/time_yorn" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/classify_select"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/classify_yorn"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_green"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/image_expansion"
+            android:visibility="gone"/>
+        <include
+            layout="@layout/text_expansion"
+            android:visibility="gone"/>
+        <include
+            layout="@layout/data_expansion"
+            android:visibility="gone"/>
+        <include
+            layout="@layout/class_expansion"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</LinearLayout>

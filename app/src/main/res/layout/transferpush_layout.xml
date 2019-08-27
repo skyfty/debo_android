@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:background="@drawable/push_redpacket_bg"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_head"
+            android:padding="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.hyphenate.easeui.view.RoundedImageView
+                android:id="@+id/iv_head"
+                android:layout_width="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                app:corner_radius="5dp"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                />
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:text="名字"
+                android:textSize="16sp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/iv_head"
+                />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_below="@+id/rl_head"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_margin="15dp"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="100sp">
+                <TextView
+                    android:id="@+id/tv_jine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="转账金额"
+                    android:textSize="14sp"
+                    android:textColor="#060606"
+                    />
+                <LinearLayout
+                    android:layout_below="@+id/tv_jine"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="￥"
+                        android:textSize="20sp"
+                        android:textColor="#060606"
+                        />
+                    <EditText
+                        android:id="@+id/tt_money"
+                        android:inputType="numberDecimal"
+                        android:layout_width="match_parent"
+                        android:maxLength="6"
+                        android:text=""
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/black"
+                        android:background="@null"
+                        android:textStyle="bold"
+                        android:textSize="30sp"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ededed"
+                />
+
+            <TextView
+                android:id="@+id/tv_push_explain"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#525B6A"
+                android:text="添加转账说明"
+                />
+            <TextView
+                android:id="@+id/tv_but_push"
+                android:layout_width="match_parent"
+                android:layout_margin="25dp"
+                android:gravity="center"
+                android:layout_height="48dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:background="@drawable/transfer_bg"
+                android:text="转账"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<resources>
+    <dimen name="size_80">80dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="circle_message_image">40dp</dimen>//朋友圈发表图片高宽
+
+    <dimen name="circle_head_height2">290dp</dimen>//朋友圈head有新消息头部
+    <dimen name="circle_head_height">125dp</dimen>//朋友圈head头部高度
+    <dimen name="circle_image_head_marginTop">210dp</dimen>//朋友圈head头部头像距离顶部
+    <dimen name="circle_head_bg">250dp</dimen>//朋友圈head头部背景图
+
+    <!--个人页peronal  取标记的五分之4-->
+    <dimen name="peronal_head_height">360dp</dimen>//head头部高度
+    <dimen name="peronal_head_margin_left">13dp</dimen>//head距离左边距
+    <dimen name="peronal_head_margin_top">100dp</dimen>//head头像距离顶部
+    <dimen name="peronal_head_photo">66dp</dimen>//head头像高宽
+    <dimen name="peronal_name_margintop">24dp</dimen>//name距离头像距离
+    <dimen name="peronal_view_margintop">16dp</dimen>//view距离name距离
+    <dimen name="peronal_content_margintop">25dp</dimen>//content距离view距离
+    <dimen name="peronal_other_margintop">32dp</dimen>//点赞距离view距离
+    <dimen name="peronal_table_height">37dp</dimen>//table高度
+    <dimen name="peronal_name">20sp</dimen>//name字体
+    <dimen name="peronal_outher">11sp</dimen>//bode号,content,省份，radiobutton
+    <dimen name="peronal_dianzan">16sp</dimen>//点赞
+    <!-- google -->
+    <dimen name="refresh_header_height_google">100dp</dimen>
+    <dimen name="refresh_trigger_offset_google">100dp</dimen>
+    <dimen name="refresh_final_offset_google">150dp</dimen>
+    <dimen name="refresh_drawable_size_google">40dp</dimen>
+
+    <dimen name="load_more_footer_height_google">72dp</dimen>
+    <dimen name="load_more_trigger_offset_google">88dp</dimen>
+    <dimen name="load_more_final_offset_google">120dp</dimen>
+    <dimen name="load_more_drawable_size_google">36dp</dimen>
+
+    <dimen name="corner_radius">8dp</dimen>
+
+    <dimen name="config_text_size">14sp</dimen>
+    <dimen name="config_text_padding">5dp</dimen>
+    <dimen name="config_text_type_width">80dp</dimen>
+    <dimen name="config_text_width">60dp</dimen>
+</resources>

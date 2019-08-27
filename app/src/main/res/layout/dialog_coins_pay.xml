@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rect_white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/circle_name"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/text_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="￥0.00"
+        android:textColor="@color/circle_name"
+        android:textSize="20sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/line" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请输入支付密码"
+        android:textColor="@color/fans_gray"
+        android:textSize="16sp" />
+
+    <com.jungly.gridpasswordview.GridPasswordView
+        android:id="@+id/pwdView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:gpvGridColor="#ffffff"
+        app:gpvLineColor="@color/color_divider"
+        app:gpvLineWidth="1dp"
+        app:gpvPasswordLength="6"
+        android:layout_marginTop="10dp"
+        app:gpvPasswordType="numberPassword"
+        app:gpvTextColor="@color/circle_name"
+        app:gpvTextSize="16sp"/>
+    <!--app:gpvPasswordTransformation="."-->
+    <!--android:gravity="center"-->
+</LinearLayout>
